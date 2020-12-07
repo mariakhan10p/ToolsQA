@@ -8,7 +8,7 @@ import java.util.Properties;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class PracticeForm {
+public class PracticeFormPage {
 
     By xpathForm = By.xpath("//*/h5[contains(.,\"Forms\")]");
     By xpathPracticeForm = By.xpath("//*[@id=\"item-0\"]/span[contains(.,\"Practice Form\")]");

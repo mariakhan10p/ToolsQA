@@ -7,7 +7,7 @@ public class ConfigUtil {
     public Properties getConfig(String filename) {
         Properties myProp = new Properties();
         try {
-            File configExternalFile = new File(System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"java"+File.separator+"com"+File.separator+"tenpearls"+File.separator+"configfiles"+File.separator+filename+".properties");
+            File configExternalFile = new File(System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"java"+File.separator+"resources"+File.separator+filename+".properties");
             if(configExternalFile.exists()) {
                 myProp.load(new FileInputStream(configExternalFile));
             } else {

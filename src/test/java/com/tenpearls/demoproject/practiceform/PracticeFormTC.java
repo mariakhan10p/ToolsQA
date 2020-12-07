@@ -4,25 +4,25 @@ import org.testng.annotations.Test;
 
 public class PracticeFormTC {
 
-    PracticeForm practiceForm = new PracticeForm();
+    PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Test
     void UserSubmitsRequiredFields(){
-        practiceForm.openHome();
-        practiceForm.clickForm();
-        practiceForm.clickPracticeForm();
+        practiceFormPage.openHome();
+        practiceFormPage.clickForm();
+        practiceFormPage.clickPracticeForm();
         Student student = new Student("Maria", "Khan", "Female", "03001111111");
-        practiceForm.enterRequiredStudentData(student);
-        practiceForm.clickSubmitButton();
-        practiceForm.assertSubmissionModal();
+        practiceFormPage.enterRequiredStudentData(student);
+        practiceFormPage.clickSubmitButton();
+        practiceFormPage.assertSubmissionModal();
     }
 
     @Test
     void UserSubmitsEmptyForm(){
-        practiceForm.openHome();
-        practiceForm.clickForm();
-        practiceForm.clickPracticeForm();
-        practiceForm.clickSubmitButton();
-        practiceForm.assertRequiredFields();
+        practiceFormPage.openHome();
+        practiceFormPage.clickForm();
+        practiceFormPage.clickPracticeForm();
+        practiceFormPage.clickSubmitButton();
+        practiceFormPage.assertRequiredFields();
     }
 }
