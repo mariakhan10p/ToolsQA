@@ -6,8 +6,8 @@ public class PracticeFormTC {
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
-    @Test
-    void UserSubmitsRequiredFields(){
+    @Test(description = "Verify Form Submission")
+    public void verifyFormSubmission(){
         practiceFormPage.openHome();
         practiceFormPage.clickForm();
         practiceFormPage.clickPracticeForm();
@@ -17,8 +17,8 @@ public class PracticeFormTC {
         practiceFormPage.assertSubmissionModal();
     }
 
-    @Test
-    void UserSubmitsEmptyForm(){
+    @Test(description = "Verify Required Fields")
+    public void verifyRequiredValidation(){
         practiceFormPage.openHome();
         practiceFormPage.clickForm();
         practiceFormPage.clickPracticeForm();

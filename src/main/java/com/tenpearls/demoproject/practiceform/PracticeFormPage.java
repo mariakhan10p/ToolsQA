@@ -10,17 +10,17 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormPage {
 
-    By xpathForm = By.xpath("//*/h5[contains(.,\"Forms\")]");
-    By xpathPracticeForm = By.xpath("//*[@id=\"item-0\"]/span[contains(.,\"Practice Form\")]");
-    By idFirstName = By.id("firstName");
-    By idLastName = By.id("lastName");
-    String idGender = "//*[@id=\"genterWrapper\"]/div[2]/div[contains(.,\"GENDER\")]/label";
-    By idMoblieNumber = By.id("userNumber");
-    By idSubmit = By.id("submit");
-    By idSubmissionModalTitle = By.id("example-modal-sizes-title-lg");
-    By idMale = By.id("gender-radio-1");
-    Properties config;
-    ConfigUtil readConfig = new ConfigUtil();
+    private By xpathForm = By.xpath("//*/h5[contains(.,\"Forms\")]");
+    private By xpathPracticeForm = By.xpath("//*[@id=\"item-0\"]/span[contains(.,\"Practice Form\")]");
+    private By idFirstName = By.id("firstName");
+    private By idLastName = By.id("lastName");
+    private String idGender = "//*[@id=\"genterWrapper\"]/div[2]/div[contains(.,\"GENDER\")]/label";
+    private By idMoblieNumber = By.id("userNumber");
+    private By idSubmit = By.id("submit");
+    private By idSubmissionModalTitle = By.id("example-modal-sizes-title-lg");
+    private By idMale = By.id("gender-radio-1");
+    private Properties config;
+    private ConfigUtil readConfig = new ConfigUtil();
 
     public void openHome(){
         config = readConfig.getConfig("config");
