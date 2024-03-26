@@ -14,6 +14,9 @@
 5. TestRunner.xml
     * **TestRunner.xml** is the runner file.
     * Define Test Classes that you want to execute in the runner
+6. Driver set up
+   * **driver** folder must have the chromedriver.
+   * Define driver path in line 27 PracticeFormPage.
 
 
 

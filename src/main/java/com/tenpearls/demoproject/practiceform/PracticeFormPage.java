@@ -1,5 +1,7 @@
 package com.tenpearls.demoproject.practiceform;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Condition;
 import com.tenpearls.demoproject.utils.ConfigUtil;
 import org.openqa.selenium.By;
@@ -24,6 +26,9 @@ public class PracticeFormPage {
 
     public void openHome(){
         config = readConfig.getConfig("config");
+        //System.setProperty("webdriver.chrome.driver", "D:\\Experiments\\JavaValuObject\\ToolsQA\\driver\\chromedriver.exe");
+        Configuration.browser = "chrome";
+        WebDriverManager.chromedriver().setup();
         open(config.getProperty("URL"));
     }
 
